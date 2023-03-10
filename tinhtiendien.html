@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    .flex {
+        display: flex;
+    }
+
+</style>
+
+<body>
+    <div class="flex">
+        <div class="form-group">
+            <label for="sotien">Số diện tiêu thụ.</label>
+            <input type="text" id="hoa">
+            <button type="button" onclick="Tinh()">Tính toán</button>
+        </div>
+        <div class="form-group" style="margin-left: 50px;">
+            <label for="thanhtoan">Số tiền cần thanh toán.</label>
+            <input type="text" id="thanhtoan">
+        </div>
+    </div>
+    
+</body>
+
+</html>
+<script>
+    function Tinh() {
+    let tien = document.getElementById("hoa");
+if ( tien >401) {
+    document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*2927;
+    
+} else {
+    if ( tien >301) {
+        document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*2834;
+        
+    } else {
+        if ( tien >201) {
+            document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*2536;
+            
+        } else {
+            if ( tien >101) {
+                document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*2014;
+                
+            } else {
+                if ( tien >50) {
+                    document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*1734;
+                    
+                } else {
+                    document.getElementById("thanhtoan").value = parseInt(document.getElementById("hoa").value)*1678;
+                }   
+            }   
+        }   
+    }
+    
+}
+
+
+// 2 (51 đến 100kWh): 1.734 đồng/kWh.
+// Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh.
+// Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh.
+// Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh.
+// Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh.
+}
+</script>
