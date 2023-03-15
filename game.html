@@ -10,4 +10,29 @@
     <button onclick="play()">dân chơi ấn vào đây</button>
 </body>
 </html>
-<script src="game.js"></script>
+<script > function play() {
+    let ngu = +prompt("nhập khoảng để đoán");
+    let random = +Math.floor(Math.random() * ngu);
+    let dem = 0;
+    do {
+        console.log(random);
+        let bu = +prompt("nhập số bn chọn")
+        if (dem<3) {
+            
+        if (random == bu) {
+            alert("ban dung roi ban xin loi toi di");
+            break;
+        } else {
+            alert("ban sai roi toi xin loi ban");
+            dem ++
+        }
+        } else {
+           alert("bạn đã hết lần đoán") 
+           break;
+        }
+        
+
+        
+    } while ("random" != "bu");
+
+}</script>
