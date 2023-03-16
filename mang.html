@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sample Screen:</h1>
+    
+        <input id="onhap" type="text" placeholder="nhap cai gi vao day cung duoc" >
+        <button onclick="oadd()" id="add">add</button>
+        <button onclick="dis()" id="dis">Display</button>
+        <div id="php"> </div>
+</body>
+
+</html>
+<script> 
+        let array = new Array();
+        let x = 0;
+    function oadd(){
+        array[x]= document.getElementById("onhap").value;
+        alert(array[x]);
+             x++;
+     document.getElementById("onhap").value = "";
+     };
+     function dis(){
+        let p = ""
+        for (let i = 0; i < array.length; i++) {
+          p+=  "element"+ i + ':' + array[i]
+
+          document.getElementById("php").innerHTML = p
+        } 
+        
+     }     
+     
+
+</script>
