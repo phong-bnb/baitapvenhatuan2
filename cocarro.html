@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> game caro</h1>
+    <p id="game"></p>
+    <input type="button" value="Change Value" onclick="changeValue()" >
+</body>
+</html>
+<script>
+    let b = document.getElementById("game")
+    let c = ""
+    let a = []
+    for(let i=0;i<5;i++){
+        a[i] = new Array(0,0,0,0,0)
+    } for(let i=0;i<5;i++){
+        c += "<br>" 
+        for(let j=0; j<5 ; j++){
+        c += a[i][j] + "&nbsp"
+    
+    }
+    b.innerHTML= c
+    }
+    function changeValue(){
+        let X = +prompt("X: ")
+        let Y = +prompt("Y: ")
+        str = ""
+        a[X][Y] = "x"
+        for (let i = 0; i < 5; i++) {
+        }
+        for (let i = 0; i < 5; i++) {
+            str = str + "<br/>"
+            for (let j = 0; j < 5; j++) {
+                str = str + a[i][j] + "&nbsp"
+            }
+        }
+        document.getElementById("game").innerHTML = str;
+    }
+
+    
+
+</script>
+    <!-- function change() {
+        let X = prompt("X: ");
+        let Y = prompt("Y: ");
+        str = ""
+        
+</script> --> 

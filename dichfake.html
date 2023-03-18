@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="toptop" type="text">
+    <button onclick="phc()">Dịch</button>
+</body>
+
+</html>
+<script>
+    let array = ['pencil', 'book', 'window', 'laptop', 'phone']
+    let fake1 = ['bút chì', 'sách', 'cửa sổ', 'máy tính xách tay', 'điện thoại']
+    // onlick => doc gia tri tu input => tim vi tri cua gia tri do trong mảng array => lấy giá trị tương ứng trong mảng 2
+function phc(){
+    let nh = document.getElementById("toptop")
+    let i = 0
+    for (i=0; i < array.length; i++) {
+        if (array[i] === document.getElementById("toptop").value ) {
+         
+            break
+        }
+    }document.write(fake1[i]);
+} 
+    
+
+
+</script>
